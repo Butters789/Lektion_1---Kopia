@@ -14,29 +14,30 @@ namespace Lektion_1
         static string playerPunch = "Punch";
         static string playerKick = "Kick";
         static int playerAge;
-        static int monsterKills;
-        static int mobExp;
+        public static int monsterKills;
+        public static int mobExp;
         static int playerHp = 10;
         public static int mobHp = 5;
+        public static int playerLevel = monsterKills * mobExp / 15;
 
         static void Main(string[] args)
         {
-            
+
 
             //Läser in namnet.
-            
+
             Console.Write("Vad heter du? ");
             playerName = Console.ReadLine();
 
             //Läser in åldern.
             Console.Write("Hur gammal är du? ");
-            playerAge = Convert.ToInt32(Console.ReadLine()); 
+            playerAge = Convert.ToInt32(Console.ReadLine());
 
             //Startar historien.
             //Console.WriteLine("Nu börjar äventyret om " + playerName +".")
             Console.WriteLine("Nu börjar äventyret om {0}.", playerName);
             Console.WriteLine("{0} är {1} år gammal.", playerName, playerAge);
-            Console.Clear();
+            ClearConsole();
             Console.WriteLine("En dag så mötte {0} en farlig varg i skogen.", playerName);
             Console.WriteLine("Vargen som såg så farlig ut var inte alls farlig märkte {0}", playerName);
             Console.WriteLine();
@@ -59,29 +60,60 @@ namespace Lektion_1
             mobFight = Console.ReadLine();
             //Här är en flervals fråga, If menar att "om jag säger ja så händer en typ av event" osv.
             if (mobFight == "ja")
+                FirstFight();
 
+            Console.ReadLine();
+
+        }
+
+        static void FirstFight()
+        {
+            //Här är en loop som fortsätter tills vargens hp är under 1
+            while (mobHp > 0)
             {
-                while (mobHp > 0)
-                {
-                    Console.Clear();
-                    Console.WriteLine("*SUPER EPIC BATTLE*");
-                    Console.WriteLine();
-                    Console.WriteLine("Vargens liv: {0}", mobHp);
-                    Console.WriteLine();
-                    Console.WriteLine();
-                    Console.WriteLine();
-                    Console.WriteLine("Ditt liv: {0}", playerHp);
-                    Console.WriteLine();
-                    Console.WriteLine();
-                    Console.WriteLine("[Press Enter]");
-                    Console.WriteLine();
-                    Console.WriteLine();
-                    Console.ReadLine();
-                    Console.WriteLine("Vargen använder BITE och skadar dig 2 hp");
-                    playerHp -= 2;
-                    Console.Read();
-                    Console.Clear();
+                ClearConsole();
+                Console.WriteLine("*SUPER EPIC BATTLE*");
+                Console.WriteLine();
+                Console.WriteLine("Vargens liv: {0}", mobHp);
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("Ditt liv: {0}", playerHp);
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("[Press Enter]");
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.ReadLine();
+                Console.WriteLine("Vargen använder BITE och skadar dig 2 hp");
+                playerHp -= 2;
+                Console.Read();
+                ClearConsole();
+                FirstAttack();
 
+
+
+                //Om vargen skadar dig så mycket så att du har 0 hp så dör du och får ett alternativ om att börja om
+                if (playerHp < 1)
+                {
+                    ClearConsole();
+                    Console.WriteLine("Du dog");
+                    Console.WriteLine();
+                    Console.WriteLine("Vill du börja om? Ja/Nej? ");
+                    string Answer = Console.ReadLine().ToLower();
+                    if (Answer == "ja")
+                        ResetFight();
+                    else if (Answer == "nej")
+                        GameOver();
+                    else
+                    {
+                        Console.Read();
+                        ResetFight();
+                    }
+
+
+                    Console.Read();
+                    ClearConsole();
 
                     Console.WriteLine("*SUPER EPIC BATTLE*");
                     Console.WriteLine();
@@ -95,19 +127,18 @@ namespace Lektion_1
                     Console.WriteLine();
                     Console.WriteLine("[Press Enter]");
                     Console.Read();
-                    Console.Clear();
-                    //kollar om mob hp är över 1, om det är under 1 så slutar loopen och man kommer till Tillbaka
+                    ClearConsole();
+                    //kollar om mob hp är över 1, om det är under 1 så slutar loopen och man kommer tillbaka till historien som står nedanför
 
                     FirstAttack();
                 }
-
-                Console.WriteLine("Tillbaka");
- 
+                //Här fortsätter historien när man har dödat vargen.
+                ClearConsole();
+                Console.WriteLine("Du skulle inte bråka med mig sa {0}.", playerName);
+                Console.WriteLine("Nu så gick {0} iväg genom skogen utan att någon längre bråkade med honom", playerName);
             }
-
-            Console.ReadLine();
-
         }
+        
         //FirstAttack är operationen som man kommer tillbaka till med loopen "While"
         static void FirstAttack()
         {
@@ -126,16 +157,56 @@ namespace Lektion_1
             string tempAttack = Console.ReadLine().ToLower();
             if (tempAttack == "punch")
                 Attack.DoPunch();
-                //om man skriver "punch" så kommer man in i Attacks classen
+            //om man skriver "punch" så kommer man in i Attacks classen
             else if (tempAttack == "kick")
                 Attack.DoKick();
             else
-                {
-                    Console.Clear();
-                    FirstAttack();
-                }
-            
-                    
+            {
+                ClearConsole();
+                FirstAttack();
+            }
+
+        }
+
+        //detta gör att man kan Cleara consolen i andra klasser
+        public static void ClearConsole()
+        {
+            Console.Clear();
+        }
+
+        //man hamnar i denna voiden när man dör, den resettar Hp och startar om fighten på FirstFight.
+        static void ResetFight()
+        {
+            mobHp = 5;
+            playerHp = 10;
+            FirstFight();
+        }
+
+        static void GameOver()
+        {
+            ClearConsole();
+            Console.WriteLine("  ▄████  ▄▄▄       ███▄ ▄███▓▓█████ ");
+            Console.WriteLine(" ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀ ");
+            Console.WriteLine("▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███   ");
+            Console.WriteLine("░▓█  ██▓░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄ ");
+            Console.WriteLine("░▒▓███▀▒ ▓█   ▓██▒▒██▒   ░██▒░▒████▒");
+            Console.WriteLine(" ░▒   ▒  ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░");
+            Console.WriteLine("  ░   ░   ▒   ▒▒ ░░  ░      ░ ░ ░  ░");
+            Console.WriteLine("░ ░   ░   ░   ▒   ░      ░      ░   ");
+            Console.WriteLine("      ░       ░  ░       ░      ░  ░");
+            Console.WriteLine();
+            Console.WriteLine(" ▒█████   ██▒   █▓▓█████  ██▀███    ");
+            Console.WriteLine("▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒  ");
+            Console.WriteLine("▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒  ");
+            Console.WriteLine("▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄    ");
+            Console.WriteLine("░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒  ");
+            Console.WriteLine("░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░  ");
+            Console.WriteLine("  ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░  ");
+            Console.WriteLine("░ ░ ░ ▒       ░░     ░     ░░   ░   ");
+            Console.WriteLine("    ░ ░        ░     ░  ░   ░       ");
+            Console.WriteLine("              ░                     ");
+            Console.Read();
+            Environment.Exit(0);
         }
     }
 }

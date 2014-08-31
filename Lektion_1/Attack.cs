@@ -10,21 +10,25 @@ namespace Lektion_1
         //Man kommer hit om man skriver "punch" när man väljer attack
         public static void DoPunch()
         {
-            Console.Clear();
-            Console.Write("Funkar");
             //ändrar motståndarens hp
-            Program.mobHp -= 2;
-            Console.WriteLine("Motståndarens hp är just nu {0}", Program.mobHp);
-            return;   
+            Program.mobHp -= 1;
+            Program.ClearConsole();
+            Console.WriteLine();
+            Console.WriteLine("Vargen dog och du fick {0} Exp.", Program.mobExp);
+            Console.WriteLine("Du är nu i level {0}", Program.monsterKills * Program.mobExp / 15 + 1);
+            Console.Read();
+            return;
             //return gör så man kommer tillbaka till fighten och får slåss mer
         }
         //samma sak med punch fast med kick istället
         public static void DoKick()
         {
-            Console.Write("Funkar");
-
             Program.mobHp -= 2;
-            Console.WriteLine("Motståndarens hp är just nu {0}", Program.mobHp);
+            Program.ClearConsole();
+            Console.WriteLine();
+            Console.WriteLine("Vargen dog och du fick {0} Exp.", Program.mobExp);
+            Console.WriteLine("Du är nu i level {0}", Program.monsterKills * Program.mobExp / 15 + 1);
+            Console.Read();
             return;
         }
     }

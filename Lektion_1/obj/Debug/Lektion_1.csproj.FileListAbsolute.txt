@@ -4,13 +4,7 @@ c:\users\su14rickard\documents\visual studio 2013\Projects\Lektion_1\Lektion_1\b
 c:\users\su14rickard\documents\visual studio 2013\Projects\Lektion_1\Lektion_1\bin\Debug\Lektion_1.pdb
 c:\users\su14rickard\documents\visual studio 2013\Projects\Lektion_1\Lektion_1\obj\Debug\Lektion_1.exe
 c:\users\su14rickard\documents\visual studio 2013\Projects\Lektion_1\Lektion_1\obj\Debug\Lektion_1.pdb
-C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\bin\Debug\Lektion_1.exe.config
-C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\bin\Debug\Lektion_1.exe
-C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\bin\Debug\Lektion_1.pdb
-C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\obj\Debug\Lektion_1.exe
-C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\obj\Debug\Lektion_1.pdb
 C:\Users\su14rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\bin\Debug\Lektion_1.exe.config
-C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\obj\Debug\Lektion_1.csprojResolveAssemblyReference.cache
 C:\Users\jonny_000\Desktop\Lektion_1 - Kopia\Lektion_1\bin\Debug\Lektion_1.exe.config
 C:\Users\jonny_000\Desktop\Lektion_1 - Kopia\Lektion_1\obj\Debug\Lektion_1.exe
 C:\Users\jonny_000\Desktop\Lektion_1 - Kopia\Lektion_1\obj\Debug\Lektion_1.pdb
@@ -23,3 +17,9 @@ C:\Users\rickard\Desktop\Lektion_1 - Kopia\Lektion_1\obj\Debug\Lektion_1.pdb
 C:\Users\rickard\Desktop\Lektion_1 - Kopia\Lektion_1\bin\Debug\Lektion_1.exe
 C:\Users\rickard\Desktop\Lektion_1 - Kopia\Lektion_1\bin\Debug\Lektion_1.pdb
 C:\Users\rickard\Desktop\Lektion_1 - Kopia\Lektion_1\obj\Debug\Lektion_1.csprojResolveAssemblyReference.cache
+C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\bin\Debug\Lektion_1.exe.config
+C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\bin\Debug\Lektion_1.exe
+C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\bin\Debug\Lektion_1.pdb
+C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\obj\Debug\Lektion_1.exe
+C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\obj\Debug\Lektion_1.pdb
+C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\obj\Debug\Lektion_1.csprojResolveAssemblyReference.cache
