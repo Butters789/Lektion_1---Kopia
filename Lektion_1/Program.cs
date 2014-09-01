@@ -23,7 +23,6 @@ namespace Lektion_1
         static void Main(string[] args)
         {
 
-
             //Läser in namnet.
 
             Console.Write("Vad heter du? ");
@@ -158,7 +157,7 @@ namespace Lektion_1
                 
             }
         }
-        
+
         //FirstAttack är operationen som man kommer tillbaka till med loopen "While"
         static void FirstAttack()
         {
