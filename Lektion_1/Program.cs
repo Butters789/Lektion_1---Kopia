@@ -64,6 +64,12 @@ namespace Lektion_1
 
             Console.ReadLine();
 
+            //Här fortsätter historien när man har dödat vargen.
+            ClearConsole();
+            Console.WriteLine("Du skulle inte bråka med mig sa {0}.", playerName);
+            Console.WriteLine("Nu så gick {0} iväg genom skogen utan att någon längre bråkade med honom", playerName);
+            Console.Read();
+
         }
 
         static void FirstFight()
@@ -94,7 +100,7 @@ namespace Lektion_1
 
 
                 //Om vargen skadar dig så mycket så att du har 0 hp så dör du och får ett alternativ om att börja om
-                if (playerHp < 1)
+                if (playerHp < 2)
                 {
                     ClearConsole();
                     Console.WriteLine("Du dog");
@@ -132,10 +138,6 @@ namespace Lektion_1
 
                     FirstAttack();
                 }
-                //Här fortsätter historien när man har dödat vargen.
-                ClearConsole();
-                Console.WriteLine("Du skulle inte bråka med mig sa {0}.", playerName);
-                Console.WriteLine("Nu så gick {0} iväg genom skogen utan att någon längre bråkade med honom", playerName);
             }
         }
         

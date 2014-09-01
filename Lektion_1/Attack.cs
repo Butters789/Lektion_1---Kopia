@@ -12,11 +12,9 @@ namespace Lektion_1
         {
             //ändrar motståndarens hp
             Program.mobHp -= 1;
-            Program.ClearConsole();
-            Console.WriteLine();
-            Console.WriteLine("Vargen dog och du fick {0} Exp.", Program.mobExp);
-            Console.WriteLine("Du är nu i level {0}", Program.monsterKills * Program.mobExp / 15 + 1);
-            Console.Read();
+
+            if (Program.mobHp < 0)
+                FightWin();
             return;
             //return gör så man kommer tillbaka till fighten och får slåss mer
         }
@@ -24,12 +22,20 @@ namespace Lektion_1
         public static void DoKick()
         {
             Program.mobHp -= 2;
+
+            if (Program.mobHp < 0)
+                FightWin();
+                
+            return;
+        }
+
+        public static void FightWin()
+        {
             Program.ClearConsole();
             Console.WriteLine();
             Console.WriteLine("Vargen dog och du fick {0} Exp.", Program.mobExp);
             Console.WriteLine("Du är nu i level {0}", Program.monsterKills * Program.mobExp / 15 + 1);
             Console.Read();
-            return;
         }
     }
 }
