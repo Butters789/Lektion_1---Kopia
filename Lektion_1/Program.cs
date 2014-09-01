@@ -60,7 +60,19 @@ namespace Lektion_1
             mobFight = Console.ReadLine();
             //Här är en flervals fråga, If menar att "om jag säger ja så händer en typ av event" osv.
             if (mobFight == "ja")
+            {
                 FirstFight();
+            }
+            else if (mobFight == "nej")
+            {
+                ClearConsole();
+                Console.WriteLine("Vargen anfaller dig när du vänder ryggen till.");
+                Console.WriteLine("Vargen fick då en BACKSTAB och skadade dig 2 hp direkt");
+                Console.Read();
+                playerHp -= 2;
+                FirstFight();
+            }
+
 
             Console.ReadLine();
 
@@ -94,13 +106,9 @@ namespace Lektion_1
                 Console.WriteLine("Vargen använder BITE och skadar dig 2 hp");
                 playerHp -= 2;
                 Console.Read();
-                ClearConsole();
-                FirstAttack();
-
-
 
                 //Om vargen skadar dig så mycket så att du har 0 hp så dör du och får ett alternativ om att börja om
-                if (playerHp < 2)
+                if (playerHp < 1)
                 {
                     ClearConsole();
                     Console.WriteLine("Du dog");
@@ -116,6 +124,7 @@ namespace Lektion_1
                         Console.Read();
                         ResetFight();
                     }
+
 
 
                     Console.Read();
@@ -138,6 +147,15 @@ namespace Lektion_1
 
                     FirstAttack();
                 }
+
+
+
+                ClearConsole();
+                FirstAttack();
+
+
+
+                
             }
         }
         
