@@ -56,7 +56,7 @@ namespace Lektion_1
 
             Console.WriteLine();
             Console.WriteLine("Vill du slåss mot vargen? Ja/Nej? ");
-            mobFight = Console.ReadLine();
+            mobFight = Console.ReadLine().ToLower();
             //Här är en flervals fråga, If menar att "om jag säger ja så händer en typ av event" osv.
             if (mobFight == "ja")
             {
@@ -109,24 +109,24 @@ namespace Lektion_1
                 //Om vargen skadar dig så mycket så att du har 0 hp så dör du och får ett alternativ om att börja om
                 if (playerHp < 1)
                 {
-                    string answer;
+                    string deathAnswer;
                     ClearConsole();
                     Console.WriteLine("Du dog");
                     Console.WriteLine();
-                    Console.Write("Vill du börja om? Ja/Nej? ");
-                    answer = Console.ReadLine().ToLower();
-                    Console.WriteLine("!" + answer + "!");
-                    if (answer == "ja")
+                    Console.WriteLine("Vill du börja om? Ja/Nej? ");
+                    deathAnswer = Console.ReadLine().ToLower();
+
+                    if (deathAnswer == "ja")
                         ResetFight();
-                    else if (answer == "nej")
+                    else if (deathAnswer == "nej")
                         GameOver();
                     else
                     {
-                        Console.Read();
+                        Console.WriteLine("Du valde inget alternativ");
+                        Console.WriteLine("Så nu startar jag om fighten åt dig");
+                        Console.ReadLine();
                         ResetFight();
                     }
-
-
 
                     Console.Read();
                     ClearConsole();
