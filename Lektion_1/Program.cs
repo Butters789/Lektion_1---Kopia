@@ -109,17 +109,21 @@ namespace Lektion_1
                 //Om vargen skadar dig så mycket så att du har 0 hp så dör du och får ett alternativ om att börja om
                 if (playerHp < 1)
                 {
-                    string deathAnswer;
-                    ClearConsole();
+                    //string deathAnswer;
+                    //ClearConsole();
                     Console.WriteLine("Du dog");
-                    Console.WriteLine();
-                    Console.WriteLine("Vill du börja om? Ja/Nej? ");
-                    deathAnswer = Console.ReadLine().ToLower();
+                    //Console.WriteLine();
+                    Console.Write("Vill du börja om? Ja/Nej? ");
+                    string deathAnswer = Console.ReadLine();
 
                     if (deathAnswer == "ja")
+                    {
                         ResetFight();
+                    }
                     else if (deathAnswer == "nej")
+                    {
                         GameOver();
+                    }
                     else
                     {
                         Console.WriteLine("Du valde inget alternativ");
