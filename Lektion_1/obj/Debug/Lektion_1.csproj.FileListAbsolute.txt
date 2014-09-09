@@ -23,3 +23,9 @@ C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion
 C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\obj\Debug\Lektion_1.exe
 C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\obj\Debug\Lektion_1.pdb
 C:\Users\rickard\Documents\Visual Studio 2013\Projects\Lektion_1 - Kopia\Lektion_1\obj\Debug\Lektion_1.csprojResolveAssemblyReference.cache
+C:\Users\su14rickard\Documents\Visual Studio 2013\Projects\Lektion_1---Kopia\Lektion_1\bin\Debug\Lektion_1.exe.config
+C:\Users\su14rickard\Documents\Visual Studio 2013\Projects\Lektion_1---Kopia\Lektion_1\bin\Debug\Lektion_1.exe
+C:\Users\su14rickard\Documents\Visual Studio 2013\Projects\Lektion_1---Kopia\Lektion_1\bin\Debug\Lektion_1.pdb
+C:\Users\su14rickard\Documents\Visual Studio 2013\Projects\Lektion_1---Kopia\Lektion_1\obj\Debug\Lektion_1.exe
+C:\Users\su14rickard\Documents\Visual Studio 2013\Projects\Lektion_1---Kopia\Lektion_1\obj\Debug\Lektion_1.pdb
+C:\Users\su14rickard\Documents\Visual Studio 2013\Projects\Lektion_1---Kopia\Lektion_1\obj\Debug\Lektion_1.csprojResolveAssemblyReference.cache
